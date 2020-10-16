@@ -1,0 +1,36 @@
+{% extends "base/index.html" %}
+
+{% block main %}
+<section class="section_listar">
+<div class="row">
+    <h1>Supermarket</h1>
+    <a href="/producto/agregar/">Agregar</a>
+</div>
+<div class="container">
+    {% if productos %}
+    <table>
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+        </tr>
+        </thead>
+
+        <tbody>
+            {% for producto in productos %}
+                <tr id="{{producto.id}}">
+                    <td>{{producto.nombre}}</td>
+                    <td>{{producto.precio}}</td>
+                    <a class="waves-effect waves-light btn-small">M</a>
+                    <a class="waves-effect waves-light btn-small">E</a>
+                </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No hay Productos</p>
+    {% endif %}
+</div>
+
+</section>
+{% endblock main %}
