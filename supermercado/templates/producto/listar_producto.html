@@ -21,8 +21,10 @@
                 <tr id="{{producto.id}}">
                     <td>{{producto.nombre}}</td>
                     <td>{{producto.precio}}</td>
-                    <a class="waves-effect waves-light btn-small">M</a>
-                    <a class="waves-effect waves-light btn-small">E</a>
+                    <td>
+                    <a href="modificar/{{ producto.id }}" class="waves-effect waves-light btn-small">M</a>
+                    <a href="eliminar/{{ producto.id }}" class="waves-effect waves-light btn-small">E</a>
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>
