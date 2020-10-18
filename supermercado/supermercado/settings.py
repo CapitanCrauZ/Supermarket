@@ -38,8 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'producto',
-    'cuenta'
+    'cuenta',
+    'producto'
+    
 ]
 
 MIDDLEWARE = [
@@ -81,7 +82,7 @@ WSGI_APPLICATION = 'supermercado.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'supermercado',
+        'NAME': 'supermercadov2',
         'USER':'root',
         'PASSWORD':'1234',
         'HOST':'localhost',
